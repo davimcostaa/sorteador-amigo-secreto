@@ -1,0 +1,37 @@
+.header {
+    display: flex;
+    justify-content: center;
+    padding-top: 120px;
+    gap: 15px;
+}
+
+.imagemLogo {
+    background-image: url("/public/imagens/LogoHorizontal.png");
+    background-repeat: no-repeat;
+    width: 351px;
+    height: 117px;
+}
+
+.imagemCabecalho {
+    margin-top: 121px;
+    z-index: 1;
+}
+
+@media screen and (max-width: 800px) {
+    .header {
+        padding-top: 60px;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .imagemLogo {
+        background-image: url("/public/imagens/LogoVertical.png");
+        width: 235px;
+        height: 199px;
+    }
+
+    .imagemCabecalho {
+        width: 328px;
+        margin-top: 0px;
+    }
+}
