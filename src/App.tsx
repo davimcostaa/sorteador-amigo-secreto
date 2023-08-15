@@ -1,11 +1,19 @@
 import React from 'react';
-import './App.css';
-import Cabecalho from './componentes/Cabecalho';
+import { BrowserRouter, Route, Routes } from 'react-router-dom';
+import { RecoilRoot } from 'recoil';
+import Formulario from './componentes/Formulario';
 
 function App() {
   return (
     <div className="App">
-        <Cabecalho />
+      <BrowserRouter>
+        <RecoilRoot>
+          <Routes>
+            <Route path='/' element={<Formulario />} />
+          </Routes>
+        </RecoilRoot>
+      </BrowserRouter>
+      
     </div>
   );
 }
