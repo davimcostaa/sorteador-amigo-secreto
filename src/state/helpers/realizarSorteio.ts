@@ -2,7 +2,6 @@ import shuffle from 'just-shuffle'
 
 
 export function realizarSorteio (participantes: string[]) {
-
         const totalDeParticipantes = participantes.length
         const embaralhado = shuffle(participantes)
         const resultado = new Map<string, string>()

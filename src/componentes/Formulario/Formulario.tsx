@@ -13,7 +13,7 @@ const Formulario = () => {
 
   const adicinarParticipante = (evento: React.FormEvent<HTMLFormElement>) => {
       evento.preventDefault()
-      adicionarNaLista(nome)
+      adicionarNaLista(nome[0].toUpperCase() + nome.substring(1))
       setNome("")
       inputRef.current?.focus()
   }
