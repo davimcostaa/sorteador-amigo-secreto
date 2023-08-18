@@ -8,7 +8,7 @@ import Rodape from '../componentes/Rodape/Rodape'
 const Configuracao = () => {
   return (
     <>
-        <Cabecalho />
+    <Cabecalho />
         <Card>
             <Formulario />
             <ListaParticipantes />

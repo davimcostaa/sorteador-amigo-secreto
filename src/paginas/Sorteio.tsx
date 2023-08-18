@@ -1,6 +1,8 @@
 import React, { useState } from 'react'
+import Card from '../componentes/Card'
 import { useListaDeParticipante } from '../state/hooks/useListaDeParticipante'
 import { useResultadoDoSorteio } from '../state/hooks/useResultadoDoSorteio'
+import styles from './Sorteio.module.css'
 
 const Sorteio = () => {
 
@@ -19,7 +21,9 @@ const Sorteio = () => {
     }
 
   return (
-    <section>
+    
+    <Card>
+      <section className={styles.sorteio}>
         <form onSubmit={sortear}>
             <select 
               required name="participanteDaVez" 
@@ -30,10 +34,16 @@ const Sorteio = () => {
               >
                 {participantes.map(participante => <option key={participante}>{participante}</option>)}
             </select>
-            <button>Sortear</button>
+            <button className={styles.botaoSortear}>Sortear</button>
         </form>
         {amigoSecreto && <p role='alert'> {amigoSecreto} </p>}
+
+        <footer className={styles.sorteio}>
+                <img src="/imagens/aviao.png" className="aviao" alt="Um desenho de um avião de papel" />
+            </footer>
     </section>
+    </Card>
+    
   )
 }
 
